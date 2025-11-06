@@ -8,7 +8,9 @@ def add_task():
             description = input('Enter a description for your task: ')
             date = input('Enter a due date for your task: ')
             completed = False
-            myline = (f'\nName: {name}, Description: {description}, Due date: {date}, Completed: {completed}.')
+            f = open('tasks.txt', 'r')
+            count = len(f.readlines())+1
+            myline = (f'\n{count}. Name: {name}, Description: {description}, Due date: {date}, Completed: {completed}.')
             file.write(myline)
         elif mynum == 2:
             running_add = False

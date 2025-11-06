@@ -18,6 +18,8 @@ def complete_task():
             with open(completed_file, "a") as completed:
                 completed.write(removed_line)
 
+            print(f"Task {line_to_remove} marked as completed, and added to Completed Tasks List")
+
         elif mynum == 2:
             running_complete = False
         else:
